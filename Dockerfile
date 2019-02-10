@@ -1,5 +1,5 @@
 FROM openjdk:alpine
 
-COPY --from=BUILDMINION /usr/src/myapp/target/*.jar /maven/
+COPY /target/*.jar /app/
 
-CMD java $JAVA_OPTS -jar maven/*.jar
+CMD java $JAVA_OPTS -jar app/*.jar
